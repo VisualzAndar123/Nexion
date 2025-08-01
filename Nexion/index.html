@@ -228,7 +228,7 @@
                     <!-- Contact Form (Narrower Column) -->
                     <div class="bg-gray-800 p-8 rounded-lg shadow-lg md:col-span-2">
                         <h3 class="text-2xl font-bold text-white mb-4">Or, Send Us a Message</h3>
-                        <form name="contact" netlify>
+                        <form id="contact-form">
                             <div class="grid grid-cols-1 gap-y-6">
                                 <div>
                                     <label for="full-name" class="sr-only">Full name</label>
@@ -322,6 +322,50 @@
             });
         });
     </script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "FXq4jxoYtW8ZFvZ5j",
+        });
+    })();
+</script>
+
+<script type="text/javascript">
+    window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const serviceID = 'service_25s32cx';
+            const templateID = 'template_ku4v6tc';
+
+            // Show a sending message
+            const submitButton = this.querySelector('button[type="submit"]');
+            submitButton.innerHTML = 'Sending...';
+            submitButton.disabled = true;
+
+            // send the email
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    submitButton.innerHTML = 'Message Sent!';
+                    // Optional: reset form after a few seconds
+                    setTimeout(() => {
+                        document.getElementById('contact-form').reset();
+                        submitButton.innerHTML = 'Send Message';
+                        submitButton.disabled = false;
+                    }, 3000);
+                }, (err) => {
+                    submitButton.innerHTML = 'Send Message';
+                    submitButton.disabled = false;
+                    alert(JSON.stringify(err));
+                });
+        });
+    }
+</script>
+
 
 </body>
 </html>
