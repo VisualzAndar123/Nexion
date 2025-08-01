@@ -167,7 +167,7 @@
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
                     <!-- Portfolio Item 1 -->
-                    <a href="https://arabesquewoodfactory.netlify.app/" target="_blank" rel="noopener noreferrer">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
                         <div class="group relative overflow-hidden rounded-lg shadow-lg">
                             <img src="arabesquelogo.jpg" alt="Arabesque Website" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:bg-opacity-70 flex items-center justify-center">
@@ -179,7 +179,7 @@
                         </div>
                     </a>
                     <!-- Portfolio Item 2 -->
-                    <a href="https://beitsettimenu.netlify.app/" target="_blank" rel="noopener noreferrer">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
                         <div class="group relative overflow-hidden rounded-lg shadow-lg">
                             <img src="weblogo.jpg" alt="Beit Setti" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                             <div class="absolute inset-0 bg-black bg-opacity-50 transition-opacity duration-300 group-hover:bg-opacity-70 flex items-center justify-center">
@@ -202,22 +202,25 @@
                     <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">Ready to Start Your Project?</p>
                     <p class="mt-4 max-w-2xl text-xl text-gray-400 mx-auto">Schedule a free, no-obligation consultation with our experts. Let's discuss your vision and how we can bring it to life.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <!-- Google Calendar Embed -->
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                <!-- UPDATED GRID LAYOUT -->
+                <div class="grid grid-cols-1 md:grid-cols-5 gap-12">
+                    <!-- Google Calendar Embed (Wider Column) -->
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg md:col-span-3">
                         <h3 class="text-2xl font-bold text-white mb-4 flex items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-3 text-blue-400"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                             Book a Discovery Call
                         </h3>
                         <p class="text-gray-400 mb-6">Choose a time that works for you. We'll send a Google Meet invitation to your email address.</p>
-                        <div class="h-[600px] rounded-lg overflow-hidden">
-                            <iframe src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2oMZK_kXyecZMphOznAsWo1nSoJJTUTX1w59R36lwwBSMAxhiiRdwszzBHX8pO5WRA2ZlvcxkO?gv=true" style="border: 0;" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+                        <!-- INCREASED HEIGHT AND ADDED BACKGROUND -->
+                        <div class="h-[600px] rounded-lg overflow-hidden bg-white">
+                            <!-- Google Calendar Appointment Scheduling begin -->
+                            <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2oMZK_kXyecZMphOznAsWo1nSoJJTUTX1w59R36lwwBSMAxhiiRdwszzBHX8pO5WRA2ZlvcxkO?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
                         </div>
-                        <p class="text-xs text-gray-500 mt-4"></p>
+                        <p class="text-xs text-gray-500 mt-4">Note: If appointments aren't showing, ensure you are using the special "Appointment Page" link from your Google Calendar settings.</p>
                     </div>
 
-                    <!-- Contact Form -->
-                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg">
+                    <!-- Contact Form (Narrower Column) -->
+                    <div class="bg-gray-800 p-8 rounded-lg shadow-lg md:col-span-2">
                         <h3 class="text-2xl font-bold text-white mb-4">Or, Send Us a Message</h3>
                         <form name="contact" method="POST" data-netlify="true">
                             <div class="grid grid-cols-1 gap-y-6">
@@ -273,8 +276,8 @@
                 <div>
                     <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase">Contact</h3>
                     <ul class="mt-4 space-y-4">
-                        <li class="flex items-start"><span class="mr-3 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span><span class="text-base text-gray-300">lebwebber@gmail.com</span></li>
-                        <li class="flex items-start"><span class="mr-3 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81 .7A2 2 0 0 1 22 16.92z"></path></svg></span><span class="text-base text-gray-300">+961 81 495 030</span></li>
+                        <li class="flex items-start"><span class="mr-3 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span><span class="text-base text-gray-300">contact@nexion.dev</span></li>
+                        <li class="flex items-start"><span class="mr-3 mt-1"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-gray-400"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81 .7A2 2 0 0 1 22 16.92z"></path></svg></span><span class="text-base text-gray-300">+1 (555) 123-4567</span></li>
                     </ul>
                 </div>
             </div>
@@ -316,4 +319,3 @@
 
 </body>
 </html>
-
